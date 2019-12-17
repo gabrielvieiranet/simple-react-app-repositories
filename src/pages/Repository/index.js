@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import api from '../../services/api';
 
+<<<<<<< HEAD
 import Container from '../../Components/Container';
 import { Loading, Owner, IssueList } from './styles';
 
@@ -20,6 +21,28 @@ export default class Repository extends Component {
   async componentDidMount() {
     const { match } = this.props;
 
+=======
+import Container from '../../components/Container';
+import { Loading, Owner, IssueList } from './styles';
+
+export default class Repository extends Component {
+  static propTypes = {
+    match: PropTypes.shape({
+      params: PropTypes.shape({
+        repository: PropTypes.string,
+      }),
+    }).isRequired,
+  };
+
+  state = {
+    repository: {},
+    issues: [],
+    loading: true,
+  };
+
+  async componentDidMount() {
+    const { match } = this.props;
+>>>>>>> 8dbd686915a0b0c035ffb87156d2e5041c551bdb
     const repoName = decodeURIComponent(match.params.repository);
 
     const [repository, issues] = await Promise.all([
@@ -49,10 +72,17 @@ export default class Repository extends Component {
     return (
       <Container>
         <Owner>
+<<<<<<< HEAD
           <Link to="/">Voltar aos repositórios</Link>
           <img src={repository.owner.avatar_url} alt={repository.owner.login} />
           <h1>{repository.name}</h1>
           <h1>{repository.description}</h1>
+=======
+          <Link to="/">Voltar aos Repositórios</Link>
+          <img src={repository.owner.avatar_url} alt={repository.owner.login} />
+          <h1>{repository.name}</h1>
+          <p>{repository.description}</p>
+>>>>>>> 8dbd686915a0b0c035ffb87156d2e5041c551bdb
         </Owner>
 
         <IssueList>
@@ -65,7 +95,11 @@ export default class Repository extends Component {
                     {issue.title}
                   </a>
                   {issue.labels.map(label => (
+<<<<<<< HEAD
                     <span key={String(label.id)}>{label.name}</span>
+=======
+                    <span key={label.id}>{label.name}</span>
+>>>>>>> 8dbd686915a0b0c035ffb87156d2e5041c551bdb
                   ))}
                 </strong>
                 <p>{issue.user.login}</p>
@@ -77,6 +111,7 @@ export default class Repository extends Component {
     );
   }
 }
+<<<<<<< HEAD
 
 Repository.propTypes = {
   match: PropTypes.shape({
@@ -85,3 +120,5 @@ Repository.propTypes = {
     }),
   }).isRequired,
 };
+=======
+>>>>>>> 8dbd686915a0b0c035ffb87156d2e5041c551bdb

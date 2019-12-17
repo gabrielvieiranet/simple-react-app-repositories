@@ -22,7 +22,12 @@ export const Owner = styled.header`
   }
 
   img {
+<<<<<<< HEAD
     width: 120px;
+=======
+    max-width: 120px;
+    max-height: 120px;
+>>>>>>> 8dbd686915a0b0c035ffb87156d2e5041c551bdb
     border-radius: 50%;
     margin-top: 20px;
   }
@@ -45,13 +50,21 @@ export const Owner = styled.header`
 export const IssueList = styled.ul`
   padding-top: 30px;
   margin-top: 30px;
+<<<<<<< HEAD
   border-top: 1px solid #eee;
   list-style: none;
+=======
+  border-top: 1px solid #ddd;
+>>>>>>> 8dbd686915a0b0c035ffb87156d2e5041c551bdb
 
   li {
     display: flex;
     padding: 15px 10px;
+<<<<<<< HEAD
     border: 1px solid #eee;
+=======
+    border: 1px solid #ddd;
+>>>>>>> 8dbd686915a0b0c035ffb87156d2e5041c551bdb
     border-radius: 4px;
 
     & + li {
@@ -62,7 +75,11 @@ export const IssueList = styled.ul`
       width: 36px;
       height: 36px;
       border-radius: 50%;
+<<<<<<< HEAD
       border: 2px solid #eee;
+=======
+      border: 2px solid #ddd;
+>>>>>>> 8dbd686915a0b0c035ffb87156d2e5041c551bdb
     }
 
     div {
@@ -82,7 +99,11 @@ export const IssueList = styled.ul`
         }
 
         span {
+<<<<<<< HEAD
           background: #eee;
+=======
+          background: #ddd;
+>>>>>>> 8dbd686915a0b0c035ffb87156d2e5041c551bdb
           color: #333;
           border-radius: 2px;
           font-size: 12px;
