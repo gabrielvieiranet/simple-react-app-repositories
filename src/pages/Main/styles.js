@@ -64,7 +64,6 @@ export const List = styled.ul`
     align-items: center;
 
     & + li {
-<<<<<<< HEAD
       border-top: 1px solid #eee;
     }
 
@@ -72,14 +71,5 @@ export const List = styled.ul`
       color: #7159c1;
       text-decoration: none;
     }
-=======
-      border-top: 1px solid #ccc;
-    }
-  }
-
-  a {
-    color: #7159c1;
-    text-decoration: none;
->>>>>>> 8dbd686915a0b0c035ffb87156d2e5041c551bdb
   }
 `;
